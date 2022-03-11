@@ -24,23 +24,22 @@ function verificar()
             if (idade >= 0 && idade < 10)
             {
                 // criança
-                
-
+                img.setAttribute(`src`, `image/foto-bebe-m.png`)
             }
             else if (idade < 21)
             {
                 //jovem
-
+                img.setAttribute(`src`, `image/foto-jovem-m.png`)
             }
             else if (idade < 50)
             {
                 //adulto
-
+                img.setAttribute(`src`, `image/foto-adulto-m.png`)
             }
             else
             {
                 // idoso
-
+                img.setAttribute(`src`, `image/foto-idoso-m.png`)
             }
         }
         else
@@ -49,23 +48,24 @@ function verificar()
 
             if (idade >= 0 && idade < 10)
             {
-
+                img.setAttribute(`src`, `image/foto-bebe-f.png`)
             }
             else if (idade < 21)
             {
-
+                img.setAttribute(`src`, `image/foto-jovem-f.png`)
             }
             else if (idade < 50)
             {
-
+                img.setAttribute(`src`, `image/foto-adulto-f.png`)
             }
             else
             {
-                
+                img.setAttribute(`src`, `image/foto-idoso-f.png`)
             }
         }
 
         res.style.textAlign = `center`
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+        res.appendChild(img)
     }
 }
