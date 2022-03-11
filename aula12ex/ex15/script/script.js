@@ -14,6 +14,8 @@ function verificar()
         var formulario_sexo = document.getElementsByName(`radsex`)
         var idade = ano - Number(formulario_ano.value)
         var genero = ``
+
+        // inserir imagem sem ter a tag img previamente criada
         var img = document.createElement(`img`)
         img.setAttribute(`id`, `foto`)
 
