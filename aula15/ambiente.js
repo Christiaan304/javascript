@@ -4,7 +4,7 @@ vec.push(0, `lorem`, 3)
 vec.sort()
 console.log(vec)
 console.log(`O vetor tem ${vec.length} posições`)
-console.log(vec[1])
+console.log(2*vec[4])
 
 let pos = vec.indexOf(3)
 
