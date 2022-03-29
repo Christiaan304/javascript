@@ -1,11 +1,15 @@
 /* == BANCO DE DADOS == */
 
 const Sequelize = require(`sequelize`)
+
+/**                                 nome do DB        user         senha */
 const sequelize = new Sequelize(`sistemadecadastro`, `root`, `Crystian@25612342`, {
     host: `localhost`,
     dialect: `mysql`
 })
 
+/**criar uma tabela postagens */
+/*
 const Postagem = sequelize.define(`postagens`, {
     titulo: {
         type: Sequelize.STRING
@@ -14,9 +18,12 @@ const Postagem = sequelize.define(`postagens`, {
         type: Sequelize.TEXT
     }
 })
+*/
 
+/**sincronizar a tabela no DB */
 /* Postagem.sync({force: true}) */
 
+/**inserir dados na tabela */
 /*
 Postagem.create({
     titulo: "lorem ipsum",
@@ -40,14 +47,15 @@ const Usuario = sequelize.define(`usuarios`, {
     }
 })
 
+
 /* Usuario.sync({force: true}) */
 
-/*
+
 Usuario.create({
-    nome: "Christiaan",
-    sobreNome: "Rodrigues",
-    email: "cr1998@anonmail.com",
-    idade: 24
+    nome: "Cotton",
+    sobreNome: "Line",
+    email: "cl2206@whitemail.com",
+    idade: 75
 })
 
 
