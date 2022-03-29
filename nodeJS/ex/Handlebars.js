@@ -1,6 +1,7 @@
 const express = require(`express`)
 const handlebars = require(`express-handlebars`)
 const app = express()
+const Post = require(`../models/Post`)
 
 //config
     //template engine
@@ -17,7 +18,14 @@ const app = express()
     })
 
     app.post(`/adicionar`, (req, res) => {
-        res.send(`Texto: ${req.body.titulo} Conteudo: ${req.body.conteudo}`)
+        Post.create({
+            titulo: req.body.titulo,
+            conteudo: req.body.conteudo
+        }).then( 
+            () => res.send(`post criado`) 
+        ).catch( 
+            (erro) => res.send(`Houve um erro ${erro}`) 
+        )
     })
 
 app.listen(8081, () => console.log(`Servidor rodando`))
