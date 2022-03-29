@@ -6,7 +6,7 @@ const sequelize = new Sequelize(`sistemadecadastro`, `root`, `Crystian@25612342`
 })
 
 sequelize.authenticate().then( 
-    () => console.log(`Conectado ao banco de dados!`) 
+    () => console.log(`Conectado ao banco de dados.`) 
 ).catch( 
     (erro) => console.log(`Falha ao se conectar no banco de dados. ${erro}`) 
 )

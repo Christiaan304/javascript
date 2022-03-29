@@ -13,19 +13,19 @@ const app = express()
     app.use(express.json())
 
     // rotas
-    app.get(`/cadastro`, (req, res) => {
-        res.render(`formulario`)
-    })
+    app.get(`/`, (req, res) => res.render(`home`))
+
+    app.get(`/cadastro`, (req, res) => res.render(`formulario`))
 
     app.post(`/adicionar`, (req, res) => {
         Post.create({
             titulo: req.body.titulo,
             conteudo: req.body.conteudo
         }).then( 
-            () => res.send(`post criado`) 
+            () => res.redirect(`/`) 
         ).catch( 
             (erro) => res.send(`Houve um erro ao criar o post ${erro}`) 
         )
     })
 
-app.listen(8081, () => console.log(`Servidor rodando`))
+app.listen(8081, () => console.log(`Servidor rodando.`))
