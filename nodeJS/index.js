@@ -32,4 +32,12 @@ const app = express()
         )
     })
 
+    app.get(`/deletar/:id`, (req, res) => {
+        Post.destroy({where: {'id': req.params.id}}).then(
+            () => res.redirect(`/`)
+        ).catch(
+            (erro) => res.send(`esta postagem não existe`)          
+        )
+    })
+
 app.listen(8081, () => console.log(`Servidor rodando.`))
