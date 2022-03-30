@@ -13,7 +13,11 @@ const app = express()
     app.use(express.json())
 
     // rotas
-    app.get(`/`, (req, res) => res.render(`home`))
+    app.get(`/`, (req, res) => {
+        Post.findAll({order: [[`id`, `DESC`]]}).then( (posts) => {
+            res.render(`home`, {posts: posts})
+        })
+    })
 
     app.get(`/cadastro`, (req, res) => res.render(`formulario`))
 
