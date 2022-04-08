@@ -1,5 +1,5 @@
 /*const prompt = require("prompt-sync")({sigint: true})*/
-
+/*
 let n1 = prompt(`Digite o primeiro número: `)
 let n2 = prompt(`Digite o segundo número: `)
 let operacao = prompt(`Digite uma operação: `)
@@ -31,4 +31,20 @@ else if ( operacao == `divisao` )
     {
         alert(`${n1} / ${n2} é igual ${div(n1, n2)}`)
     }
+}
+*/
+
+let numeroPorta = Math.floor( Math.random()*13001 )
+
+if ( numeroPorta % 13 == 0 )
+{
+    alert(`Você abriu a porta ${numeroPorta}, você foi para o inferno`)
+}
+else if ( numeroPorta % 7 == 0 )
+{
+    alert(`Você abriu a porta ${numeroPorta}, você foi para o céu`)
+}
+else
+{
+    alert(`Você abriu a porta ${numeroPorta}, você voltou ao mundo normal`)
 }
