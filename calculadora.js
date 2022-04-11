@@ -34,6 +34,7 @@ else if ( operacao == `divisao` )
 }
 */
 
+/*
 let numeroPorta = Math.floor( Math.random()*13001 )
 
 if ( numeroPorta % 13 == 0 )
@@ -47,4 +48,13 @@ else if ( numeroPorta % 7 == 0 )
 else
 {
     alert(`Você abriu a porta ${numeroPorta}, você voltou ao mundo normal`)
+}
+*/
+
+mostrar = document.querySelector(`#res`)
+mostrar.innerHTML = `<p>Tabuada de 9:</p>`
+
+for(let i = 0; i <= 10; i++)
+{
+    mostrar.innerHTML += (`9 x ${i} = ${i * 9} <br></br>`)
 }
