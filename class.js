@@ -245,33 +245,15 @@ class Sphere
     }
 }
 
-/*
+class BlackHole extends Sphere
+{
+    constructor(radius, mass)
+    {
+        super(radius)
+        this.mass = mass
+    }
+}
+
+
 let terra = new Sphere(prompt(`digite o raio da terra`))
 alert(`A Terra possui ${terra.surfaceArea} km² de área e ${terra.volume} km³ de volume`)
-*/
-
-class Arma
-{
-    constructor
-    (
-        nome,
-        tipo,
-        calibre,
-        anoFabricacao,
-        paisOrigem,
-        designer,
-        fabricante,
-    )
-    {
-        this.nome = nome
-        this.tipo = tipo
-        this.calibre = calibre
-        this.anoFabricacao = anoFabricacao
-        this.paisOrigem = paisOrigem
-        this.designer = designer
-        this.fabricante = fabricante
-    }
-
-    atirar(){}
-    recarregar(){}
-}
